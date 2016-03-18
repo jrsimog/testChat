@@ -18,7 +18,7 @@ $(document).ready(function() {
               });
               $('#focusedInput1').attr('value',"");
                
-              return true;
+              return false;
               
           });
         },
@@ -37,28 +37,7 @@ $(document).ready(function() {
            }
               },
           });
-        }
-    /*    
-         $(function () {
-    $.material.init();
-    $(".shor").noUiSlider({
-      start: 40,
-      connect: "lower",
-      range: {
-        min: 0,
-        max: 100
-      }
-    });
-
-    $(".svert").noUiSlider({
-      orientation: "vertical",
-      start: 40,
-      connect: "lower",
-      range: {
-        min: 0,
-        max: 100
-      }
-    });
-  });
-  */
+          }
+       
     );
+      setInterval(loadLog,2500);
