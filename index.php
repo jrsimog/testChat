@@ -94,8 +94,6 @@ else{
   </div>
     <?
 }
- $data = "El Chat Test";
-    var_dump($data);
 if (isset($_GET['logout'])) {
 $fp = fopen("log.html", 'a');
 fwrite($fp, "<div class='msgln'><i>Usuario ".$_SESSION['name']." ha salido del Chat</i><br></div>");

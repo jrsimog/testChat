@@ -29,10 +29,12 @@ $(document).ready(function() {
                  cache: false,
                  success: function(html){
                      $('#chatbox').html(html);
+                     
               var newScrollHEight =  $('#chatbox').attr("scrollHeight") - 20;
+              console.log(newScrollHEight);
            if (newScrollHEight > oldscrollHeight) {
                $('#chatbox').animate({
-                   scrollTop: newScrollHeight
+                   scrollTop: newScrollHEight
                    }, 'normal');
            }
               },
