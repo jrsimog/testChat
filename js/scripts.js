@@ -21,25 +21,21 @@ $(document).ready(function() {
               return false;
               
           });
-        },
-          function loadLog(){
-              var oldScrollHeight = $("#chatbox").attr("scrollHeight") - 20;
-              $.ajax({
-                 url: "log.html",
-                 cache: false,
-                 success: function(html){
-                     $('#chatbox').html(html);
-                     
-              var newScrollHEight =  $('#chatbox').attr("scrollHeight") - 20;
-              console.log(newScrollHEight);
-           if (newScrollHEight > oldscrollHeight) {
-               $('#chatbox').animate({
-                   scrollTop: newScrollHEight
-                   }, 'normal');
-           }
-              },
-          });
-          }
-       
-    );
-      setInterval(loadLog,2500);
+});
+    function loadLog(){		
+        
+		var oldscrollHeight = $('.chatbox').attr("scrollHeight") - 20;
+
+        $.ajax({
+			url: "log.html",
+			cache: false,
+			success: function(html){		
+				$('.chatbox').html(html);				
+				var newscrollHeight = $('.chatbox').attr("scrollHeight") - 20;
+				if(newscrollHeight > oldscrollHeight){
+					$('.chatbox').animate({ scrollTop: newscrollHeight }, 'normal'); 
+				}				
+		  	},
+		});
+	}
+      setInterval('loadLog()',1500);

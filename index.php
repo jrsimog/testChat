@@ -74,7 +74,7 @@ else{
                       </p>
                       <div style="clear:both"></div>
               </div>
-              <div id="chatbox">
+              <div name="chatbox" class="chatbox" id="chatbox">
                   <?
                   if (file_exists("log.html") && filesize("log.html")>0){
                       $handle = fopen("log.html", "r");
@@ -85,7 +85,7 @@ else{
                   ?>
               </div>
               <form name="message" action="">
-                  <input class="form-control" name="usermsg" id="focusedInput1" type="text" size="63">
+                  <input placeholder="Escribir mensaje." class="form-control" name="usermsg" id="focusedInput1" type="text" size="63">
                   <button type="button" id="submitmsg" class="btn btn-fab btn-fab-mini">
                   <i class="material-icons">send</i>
                   </button>

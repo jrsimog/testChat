@@ -6,4 +6,5 @@ if (isset($_SESSION['name'])) {
     fwrite($fp, "<div class='msgln'>(".date("g:i A").")<b>".$_SESSION['name']."</b>:".stripslashes(htmlspecialchars($text))."<br></div>");
     fclose($fp);
     }
+    var_dump($text);
 ?>
